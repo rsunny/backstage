@@ -3,32 +3,32 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: examples
+  name: swiftly
 spec:
-  owner: guests
+  owner: managers
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: example-website
+  name: node-template
 spec:
   type: website
   lifecycle: experimental
-  owner: guests
-  system: examples
+  owner: managers
+  system: swiftly
   providesApis: [example-grpc-api]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: example-grpc-api
+  name: grpc-api
 spec:
   type: grpc
   lifecycle: experimental
-  owner: guests
-  system: examples
+  owner: managers
+  system: swiftly
   definition: |
     syntax = "proto3";
 

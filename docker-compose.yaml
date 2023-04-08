@@ -1,0 +1,23 @@
+version: '3'
+services:
+    db:
+        image: postgres
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_DB=backstage
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - PGDATA=/var/lib/postgresql/data/pgdata
+        networks:
+            - backstage
+        volumes:
+            - 'postgres-backstage-data:/var/lib/postgresql/data/pgdata'
+
+
+networks:
+    backstage:
+        driver: bridge
+
+volumes:
+    postgres-backstage-data:
