@@ -17,7 +17,7 @@ spec:
   lifecycle: experimental
   owner: managers
   system: swiftly
-  providesApis: [example-grpc-api]
+  providesApis: [grpc-api]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
 apiVersion: backstage.io/v1alpha1
